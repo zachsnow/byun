@@ -1,0 +1,3 @@
+Plugins:
+	WP-Render-Links:
+		HACK: put link name in a div for styling goodness.

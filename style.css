@@ -1,0 +1,744 @@
+/*
+Theme Name: CatherineByun
+Theme URI: http://catherinebyun.com
+Author: Zach Snow
+Author URI: http://zachsnow.com
+Description: Derived from Toolbox, a theme for Cat's site.
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+*/
+
+@import url('reset.css');
+
+/* =Structure
+-------------------------------------------------------------- */
+#page {
+}
+
+#primary {}
+#content {
+    /* Push down below fixed top bar, right past fixed side bar. */
+    float: left;
+    min-width: 320px;
+    margin-top: 61px;
+    margin-left: 260px;
+    position: relative;
+}
+#main {}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/*******************************************************************************
+ * Branding (title and thumbnails).
+ ******************************************************************************/
+#title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 100;
+}
+
+#site-title {
+    width: 240px;
+    height: 60px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+#site-title a {
+    font-weight: normal;
+}
+
+#site-contact-info {
+    display: none;
+}
+
+/* Navigation menu. */
+.cb-page {
+    display: none;
+}
+.cb-page.cb-initial {
+    /* display: block; */
+}
+.cb-page .scroll-note {
+  color: #888888;
+  font-style: italic;
+  font-weight: lighter;
+  position: absolute;
+  font-size: 13px;
+  top: -3px;
+}
+
+#access {
+    position: fixed;
+    top: 50px;
+    bottom: 0px;
+    left: 0;
+    width: 240px;
+    padding-right: 20px;
+    z-index: 10;
+    background-color: white;
+}
+
+#access .menu {
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+#access li {
+    text-align: right;
+}
+#access a {
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+#access a:hover {
+    border-bottom: 1px solid #303030;
+}
+
+#access .current_page_item a {
+    font-weight: bold;
+}
+
+#access .current_page_item a:hover {
+    border: none;
+}
+
+/* Thumbnails */
+.thumbnails {
+    text-align: right;
+    padding-top: 5px;
+}
+
+.thumbnails.expande {
+}
+
+.thumbnails.collapse {
+}
+
+.thumbnails.collapsed {
+    display: none;
+}
+
+#access .thumbnails a {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+}
+
+#access .thumbnails a:hover {
+    border-bottom: none;
+}
+
+#access .thumbnails a:hover img {
+        opacity: 0.8;
+}
+
+#access .thumbnails a img {
+    vertical-align: bottom;
+    width: 50px;
+    height: 100px;
+}
+
+#email {
+    text-align: right;
+    padding-top: 10px;
+}
+
+/*******************************************************************************
+ * Content.
+ ******************************************************************************/
+.entry-header {
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+/* Post navigation. */
+.entry-navigation {
+    position: fixed;
+    height: 44px;
+    line-height: 44px;
+    top: 2px;
+    text-transform: lowercase;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Post title. */
+.entry-title {
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.entry-title a {
+    font-weight: normal;
+}
+
+.entry-title a:hover {
+    border-bottom: 1px solid #303030;
+}
+
+/* Post. */
+.entry-content, .entry-content p {
+    font-size: 12px;
+}
+
+.entry-tagline {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.entry-tagline a:hover {
+    border-bottom: 1px solid #303030;
+}
+
+/* Post footer. */
+.entry-footer {
+}
+
+/* Article styling. */
+article {
+    display: block;
+    margin-right: 10px;
+    text-align: left;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+article:first-child, .scroll-note + article {
+    border: none;
+}
+
+/* Posts are clickable. */
+article.post {
+    cursor: pointer;
+}
+
+article.post img {
+    vertical-align: baseline;
+    padding-left: 10px;
+}
+
+article.post img:first-child {
+    padding-left: 0;
+}
+
+article.post p {
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+article.post p:first-child {
+    padding-top: 0;
+}
+
+article.post.sold p:first-child {
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    border-left: 10px solid #e0e0e0;
+}
+
+/* No results (when no posts in a category that has a page). */
+.no-results .entry-content {
+    padding-top: 10px;
+}
+
+/*******************************************************************************
+ * About Me (page ID 13).
+ ******************************************************************************/
+.cb-about .entry-title {
+    display: none;
+}
+
+.cb-about .entry-date {
+    display: none;
+}
+
+.cb-about #about-portrait {
+    padding-top: 10px;
+    padding-right: 10px;
+    width: 250px;
+    height: auto;
+    float: left;
+}
+
+.cb-about #about-content {
+    margin-left: 260px;
+}
+
+.cb-about h1 {
+    font-size: 28px;
+    padding-top: 20px;
+}
+
+.cb-about h1:first-child {
+    padding-top: 0px;
+}
+
+.cb-about p {
+    line-height: 1.7em;
+    font-size: 15px;
+}
+
+.cb-about p.fact {
+    font-size: 15px;
+}
+
+/* Contact form. */
+.cb-about article {
+    border-bottom: none;
+}
+
+.cb-about #contact {
+    color: #707070;
+    font-size: 15px;
+    margin-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    width: 500px;
+}
+
+.cb-about #contact span.wpcf7-not-valid-tip {
+    display: none;
+}
+
+.cb-about #contact p {
+    line-height: 1.5em;
+    padding-top: 10px;
+}
+
+.cb-about #contact input {
+    font-size: 15px;
+    padding: 2px;
+    width: 494px;
+    border: 1px solid #e0e0e0;
+}
+
+.cb-about #contact textarea {
+    font-size: 15px;
+    width: 498px;
+    height: 130px;
+    border: 1px solid #e0e0e0;
+}
+
+.cb-about #contact #contact-info {
+    width: 500px;
+}
+
+.cb-about #contact #contact-info {
+    overflow-y: auto;
+}
+
+.cb-about #contact #contact-name {
+    float: left;
+    width: 245px;
+}
+
+.cb-about #contact #contact-name input {
+    width: 239px;
+}
+
+.cb-about #contact #contact-email {
+    float: right;
+    width: 245px;
+}
+
+.cb-about #contact #contact-email input {
+    width: 239px;
+}
+
+.cb-about #contact #contact-submit {
+    text-align: right;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.cb-about #contact #contact-submit input {
+    float: right;
+    padding: 5px;
+    font-size: 16px;
+    width: 150px;
+    border: 1px solid #e0e0e0;
+    background-color: #f0f0f0;
+}
+
+.cb-about #contact #contact-submit .ajax-loader {
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.cb-about #contact .wpcf7-response-output {
+    padding: 5px 5px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    border: 1px solid #e0a0a0;
+}
+.cb-about #contact .wpcf7-response-output.wpcf7-mail-sent-ok {
+        border: 1px solid #b0e0b0;
+}
+.cb-about #contact .wpcf7-form-control-wrap {
+        
+}
+
+/*******************************************************************************
+ * Links (page ID 46).
+ ******************************************************************************/
+.cb-links .entry-title {
+    display: none;
+}
+
+.cb-links .entry-content {
+}
+
+.cb-links .entry-date {
+    display: none;
+}
+
+.linkcat {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.linkcat .linkcattitle {
+    display: none;
+}
+
+.linkcat .brlink {
+    display: inline-block;
+    width: 230px;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.linkcat .brlink a {
+    text-align: left;
+    font-size: 13px;
+}
+
+.linkcat .brlinkname {
+    font-weight: normal;
+    padding-top: 5px;
+}
+
+
+.linkcat .brlink img {
+    vertical-align: bottom;
+    background-color: #f0f0f0;
+}
+
+
+.linkcat .brlink a:hover img {
+    opacity: 0.8;
+}
+
+/* Uncategorized. */
+.single-author .entry-meta .byline {
+    display: none;
+}
+#content nav {
+    display: none;
+    overflow: hidden;
+}
+#content nav .nav-previous {
+    float: left;
+    width: 50%;
+}
+#content nav .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+#content #nav-above {
+    display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+    display: block;
+}
+#nav-below {
+    display: none;
+    margin: 0;
+}
+.page-link {
+    clear: both;
+    margin: 0;
+}
+.page .edit-link {
+    clear: both;
+    display: block;
+}
+
+/* 404 page */
+.error404 .widget {
+    float: left;
+    width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+    margin-right: 0;
+}
+.error404 .widget_tag_cloud {
+    clear: both;
+    float: none;
+    width: 100%;
+}
+
+/* Notices */
+.post .notice, .error404 #searchform {
+    background: #f0f0f0;
+    display: block;
+    padding: 10px;
+}
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+    float: left;
+}
+.image-attachment nav {
+    float: right;
+    margin: 0 0 10px 0;
+}
+.image-attachment .entry-content {
+    clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+    background: #e0e0e0;
+    margin: 0 0 10px;
+    padding: 10px;
+    text-align: center;
+}
+.image-attachment .entry-content .attachment {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+    display: none;
+}
+.single .format-aside .entry-header {
+    display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+    padding-top: 10px;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+    padding-top: 0;
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+/* Image Posts */
+.format-image .entry-header {
+    display: none;
+}
+.single .format-image .entry-header {
+    display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+    padding-top: 10px;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+    padding-top: 0;
+}
+
+
+/*******************************************************************************
+ * Images (these are unused, as all images are within individual pages).
+ ******************************************************************************/
+a img {
+    border: none;
+}
+
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+    /* max-width: 100%;  When images are too wide for containing element, force them to fit. */
+    /* height: auto;  Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+    /* margin-right: 1em; */
+}
+img.alignright {
+    /* margin-left: 1em; */
+}
+.wp-caption {
+    padding: 10px 0;
+    text-align: center;
+}
+.wp-caption img {
+    margin: .25em;
+}
+.wp-caption .wp-caption-text {
+    margin: .5em;
+}
+.gallery-caption {}
+.wp-smiley {
+    margin: 0;
+}
+
+/*******************************************************************************
+ * Forms (these are unused, as the contact form is styled separately, and no
+ * other forms are visible).
+ ******************************************************************************/
+#searchform label {
+    display: none;
+}
+
+#searchform input#s {
+    width: 60%;
+}
+
+textarea {
+    width: 80%;
+}
+
+/* Class for labelling required form items */
+.required {
+    color: #cc0033;
+}
+
+/*******************************************************************************
+ * Footer
+ ******************************************************************************/
+#colophon {
+    padding-left: 260px;
+    clear: both;
+    display: block;
+    border-top: 1px solid #e0e0e0;
+}
+
+#site-generator {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 11px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+/*******************************************************************************
+ * Comments (these are unused, left in just in case).
+ ******************************************************************************/
+.comment {
+    display: block;
+}
+
+#respond input[type=text] {
+    display: block;
+    width: 60%;
+}
+
+#respond textarea {
+    display: block;
+    margin: 0;
+    width: 80%;
+}
+
+#respond .form-allowed-tags {
+    clear: both;
+    width: 80%;
+}
+
+#respond .form-allowed-tags code {
+    display: block;
+}
+
+
+/*******************************************************************************
+ * Widgets (these are unused).
+ ******************************************************************************/
+.widget {
+    display: block;
+}
+.widget-area {
+    float: right;
+    overflow: hidden;
+    width: 220px;
+}
+
+.widget-area .widget_search {
+    overflow: hidden;
+}
+.widget-area .widget_search input {
+    float: left;
+}
+
+
+/*******************************************************************************
+ * General styling
+ ******************************************************************************/
+
+/* Separators ( vertical bar | ) */
+.sep {
+    color: #e0e0e0;
+}
+
+/* Alignment */
+.alignleft {
+    display: inline;
+    float: left;
+}
+.alignright {
+    display: inline;
+    float: right;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*******************************************************************************
+ * Smaller devices.
+ ******************************************************************************/
+/* Add some padding around the edges for mobile devices. */
+<!--[if !IE]>-->
+@media only screen and (max-device-width: 480px) {
+    #title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+<!--[endif]>-->
